@@ -7,8 +7,38 @@ namespace TwoDimArrayRandom
         public double[,] array2Dimen;
         public InitialSettings()
         {
+            this.Initsets(0);
             this.array2Dimen = new double[this.arrayRow, this.arrayColumn];
             this.InitArray();
+        }
+        public void Initsets(int iType)
+        {
+            if (iType < 2)
+            {
+                string[] dataType = {"строка", "столбец"};
+                Console.Write($"Введите пожалуйста целое число для ({dataType[iType]}): ");
+                string enterUser = Console.ReadLine();
+                if (int.TryParse(enterUser, out int number))
+                {
+                    switch (iType)
+                    {
+                        case 0:
+                            this.arrayRow = number;
+                            break;
+                        case 1:
+                            this.arrayColumn = number;
+                            break;
+                    }
+                    iType += 1;
+                    this.Initsets(iType);
+                }
+                else
+                {
+                    Console.WriteLine("Вы ввели не число. Повторите!");
+                    this.Initsets(iType);
+                }
+            }
+            return;
         }
         public void InitArray()
         {

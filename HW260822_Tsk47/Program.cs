@@ -6,8 +6,8 @@ namespace TwoDimArrayRandom
     {
         public int arrayFirstNum = -10;
         public int arrayUpperNum = 10;
-        public int arrayRow = 3;
-        public int arrayColumn = 4;
+        public int arrayRow;
+        public int arrayColumn;
         static void Main(string[] args) 
         {
             Console.Clear();
