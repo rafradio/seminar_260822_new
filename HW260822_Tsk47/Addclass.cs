@@ -30,13 +30,12 @@ namespace TwoDimArrayRandom
                             break;
                     }
                     iType += 1;
-                    this.Initsets(iType);
                 }
                 else
                 {
                     Console.WriteLine("Вы ввели не число. Повторите!");
-                    this.Initsets(iType);
                 }
+                this.Initsets(iType);
             }
             return;
         }
