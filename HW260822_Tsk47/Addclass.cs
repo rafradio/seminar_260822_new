@@ -15,7 +15,7 @@ namespace TwoDimArrayRandom
         {
             if (iType < 2)
             {
-                string[] dataType = {"строка", "столбец"};
+                string[] dataType = {"строки", "столбца"};
                 Console.Write($"Введите пожалуйста целое число для ({dataType[iType]}): ");
                 string enterUser = Console.ReadLine();
                 if (int.TryParse(enterUser, out int number))
